@@ -21,7 +21,7 @@ export default function Card({info,eliminarPaciente}) {
             },
             body: JSON.stringify(editedInfo) // Enviar la información editada del paciente
         })
-        .then(response=> response.json)
+        .then(response=> response.json())
         .then(() => {
               eliminarPaciente(info.dni); // Llamar a la función eliminarPaciente con el DNI del paciente eliminado
               setEditForm(false); // Ocultar el formulario de edición
@@ -89,7 +89,7 @@ export default function Card({info,eliminarPaciente}) {
             <button type="button" className="btn btn-warning" onClick={()=>{guardarPaciente()}}> Guardar Cambios </button>
           </form>
         :
-        <button type="button" className="btn btn-warning" onClick={()=>{modificarPaciente()}}> Editar Paciente </button>
+        <button type="button" className="btn btn-warning m-2" onClick={()=>{modificarPaciente()}}> Editar Paciente </button>
     
         }
                 <button type="button" className="btn btn-danger" onClick={()=>borrarPaciente(info)}> Eliminar Paciente </button>

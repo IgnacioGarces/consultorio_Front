@@ -24,11 +24,9 @@ export default function Pacientes(){
 
     return(
         <div className='section-cards d-flex justify-content-center flex-wrap'>
-            {
-                datos.map((dato)=>{
-                    return <Card key={dato.dni} info={dato} eliminarPaciente={eliminarPaciente}/>
-                })
-            }
+           {Array.isArray(datos) && datos.map((dato) => (
+      <Card key={dato.dni} info={dato} eliminarPaciente={eliminarPaciente} />
+    ))}
 
         </div>
     )
