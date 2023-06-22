@@ -3,7 +3,8 @@ import './App.css';
 import Pacientes from './components/Pacientes/Pacientes'
 import FormPacientes from './components/Forms/FormPacientes';
 import Login from './components/Logeo/Login'
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
+import Search from './components/Search/Search';
 
 function App() {
   const [ocultarPacientes,setOcultarPacientes] = useState(true);
@@ -11,6 +12,8 @@ function App() {
   const[ocultarLogin,setOcultarLogin]=useState(true);
 
   return (
+  <Fragment>
+    <Search/>
     <main className="mt-5 d-flex flex-column align-items-center">
       <h1>Medical Spa App</h1>
       <div className="d-grid gap-2 col-6 mx-auto">
@@ -33,6 +36,7 @@ function App() {
           <FormPacientes  />
         </section>:''}
     </main>
+  </Fragment>
   );
 }
 

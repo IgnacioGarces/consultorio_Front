@@ -3,7 +3,10 @@ import { useState,useEffect } from 'react'
 import './Pacientes.css'
 
 export default function Pacientes(){
+    
     const [datos,setDatos] = useState([]);
+
+    
 
     const eliminarPaciente = (dni) => {
         setDatos((prevDatos) => prevDatos.filter((paciente) => paciente.dni !== dni));
@@ -23,11 +26,13 @@ export default function Pacientes(){
 
 
     return(
+        
         <div className='section-cards d-flex justify-content-center flex-wrap'>
            {Array.isArray(datos) && datos.map((dato) => (
-      <Card key={dato.dni} info={dato} eliminarPaciente={eliminarPaciente} />
-    ))}
-
-        </div>
-    )
+          <Card key={dato.dni} info={dato} eliminarPaciente={eliminarPaciente} />
+        ))}
+        
+            </div>
+        );
+    
 }

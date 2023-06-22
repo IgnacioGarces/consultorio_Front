@@ -6,6 +6,9 @@ h1{
   font-family: 'Courier New', Courier, monospace;
   margin-bottom: 4rem;
   margin-top: 4rem;
+  color: beige;
+  border-width: 8px;
+  border-color: black;
 }
 
 .btn-mostrar{

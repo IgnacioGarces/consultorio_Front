@@ -1,0 +1,18 @@
+.search-form{
+    margin-top: 1.4rem;
+}
+.search{
+    height: 2rem;
+    width: 16rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.search-btn{
+    height: 4rem;
+    width: 8rem;
+    background-color: rgb(0, 42, 0);
+    text-align:center;
+    margin-left: 2rem;
+    
+}
