@@ -17,8 +17,10 @@ export default function Search(){
         }
     };
     
+    
     useEffect(() => {
         traerInfo();
+         // eslint-disable-next-line react-hooks/exhaustive-deps    
     }, [nombreBuscado]);
     
         const eliminarPaciente = (dni) => {
